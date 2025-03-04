@@ -15,7 +15,7 @@
         <Label Text="Nom"/>
         <Entry x:Name="txtNom" Margin="0,0,0,25" Placeholder="Nom"/>
 
-        <Label Text="Mot de passe"/>
+        <Label Text="Lien"/>
         <Entry x:Name="txtLien" Margin="0,0,0,25" Placeholder="Lien" />
 
         <Label Text="Note"/>

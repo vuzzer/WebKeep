@@ -9,10 +9,10 @@
         <ToolbarItem x:Name="tbSauvegarder" Text="Sauvegarder" Clicked="tbSauvegarder_Clicked"  />
     </ContentPage.ToolbarItems>
     <VerticalStackLayout >
-        <Entry x:Name="txtRecherche" Margin="0,0,0,25" Placeholder="Recherche"/>
+        <Entry x:Name="txtRecherche" Margin="0,0,0,25" Placeholder="Recherche" TextChanged="txtRecherche_TextChanged"  />
 
         <ScrollView Padding="10,0,10,0">
-            <CollectionView x:Name="sites">
+            <CollectionView x:Name="sites" SelectionMode="Single" SelectionChanged="sites_SelectionChanged">
                 <CollectionView.EmptyView>
                     <Label Text="Aucun sites disponibles"/>
                 </CollectionView.EmptyView>
@@ -20,19 +20,19 @@
                 <CollectionView.ItemTemplate>
 
                     <DataTemplate>
-                        <ContentView>
+                        <ContentView >
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <VerticalStackLayout Grid.Column="0">
-                                    <Label Text="{Binding Nom}" />
+                                <VerticalStackLayout Grid.Column="0" Margin="9">
+                                    <Label Text="{Binding Nom}" FontSize="Title"/>
                                     <Label Text="{Binding Lien}" FontSize="Small" />
                                 </VerticalStackLayout>
 
-                                <VerticalStackLayout Grid.Column="1">
+                                <VerticalStackLayout Grid.Column="1" Margin="9">
                                     <Label Text="{Binding Date}" />
                                 </VerticalStackLayout>
                             </Grid>
@@ -41,7 +41,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            
         </ScrollView>
 
     </VerticalStackLayout>

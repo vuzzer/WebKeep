@@ -9,7 +9,8 @@ namespace WebKeep.DTO
     public class SiteDTO
     {  
         public string Nom { get; set; }
-        public string? Lien { get; set; }   
+        public string? Lien { get; set; }
+        public string? Note { get; set; }
         public string Date { get; set; }
     }
 }

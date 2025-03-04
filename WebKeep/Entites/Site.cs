@@ -13,6 +13,7 @@ namespace WebKeep.Entites
         public int Id { get; set; }
         public string Nom { get; set; }
         public string? Lien { get; set; }
+        public string? Note { get; set; }
         public int IdCompte { get; set; }
         public DateTime Date { get; set; }
     }
