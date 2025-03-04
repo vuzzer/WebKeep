@@ -53,6 +53,14 @@ public partial class Accueil : ContentPage
 
     private void txtRecherche_TextChanged(object sender, TextChangedEventArgs e)
     {
+        string searchText = e.NewTextValue?.ToLower() ?? string.Empty;
 
+        if (string.IsNullOrWhiteSpace(searchText))
+        {
+            sites.ClearValue();
+            foreach (var site in Sites)
+                FilteredSites.Add(site);
+            return;
+        }
     }
 }
