@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebKeep.Pages.NouveauSite"
+             Style="{StaticResource Background}"
+             >
+    <VerticalStackLayout Padding="25">
+        <Label 
+            x:Name="appTitle"
+            Text="Nouveau Site"
+            FontSize="Title"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Nom"/>
+        <Entry x:Name="txtNom" Margin="0,0,0,25" Placeholder="Nom"/>
+
+        <Label Text="Mot de passe"/>
+        <Entry x:Name="txtLien" Margin="0,0,0,25" Placeholder="Lien" />
+
+        <Label Text="Note"/>
+        <Editor x:Name="txtNote"  HeightRequest="100" Margin="0,0,0,25" Placeholder="Note" />
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Margin="10">
+            <Button  Text="Connexion" x:Name="btnConnexion" Clicked="btnConnexion_Clicked" BackgroundColor="Black" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+    
+</ContentPage>

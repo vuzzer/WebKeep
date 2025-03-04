@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebKeep.Pages.Connexion"
+             Style="{StaticResource Background}"
+             >
+    <VerticalStackLayout Padding="25">
+        <Label 
+            Text="WebKeep"
+            FontSize="Title"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Developpé par Bienvenu Kouassi"
+            FontSize="Subtitle"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,30"/>
+
+        <Label Text="Nom utilisateur"/>
+        <Entry x:Name="txtNomUtilisateur" Margin="0,0,0,25" Placeholder="Nom utilisateur"/>
+
+        <Label Text="Mot de passe"/>
+        <Entry x:Name="txtPwd" Margin="0,0,0,25" Placeholder="Mot de passe" IsPassword="True"/>
+        
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Margin="10">
+            <Button  Text="Connexion" x:Name="btnConnexion" Clicked="btnConnexion_Clicked" BackgroundColor="Black" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

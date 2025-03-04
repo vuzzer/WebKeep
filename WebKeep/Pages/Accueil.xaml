@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebKeep.Pages.Accueil"
+             Style="{StaticResource Background}"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="tbAjouter" Text="Ajouter" Clicked="tbAjouter_Clicked"/>
+        <ToolbarItem x:Name="tbSauvegarder" Text="Sauvegarder" Clicked="tbSauvegarder_Clicked"  />
+    </ContentPage.ToolbarItems>
+    <VerticalStackLayout >
+        <Entry x:Name="txtRecherche" Margin="0,0,0,25" Placeholder="Recherche"/>
+
+        <ScrollView Padding="10,0,10,0">
+            <CollectionView x:Name="sites">
+                <CollectionView.EmptyView>
+                    <Label Text="Aucun sites disponibles"/>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ContentView>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <VerticalStackLayout Grid.Column="0">
+                                    <Label Text="{Binding Nom}" />
+                                    <Label Text="{Binding Lien}" FontSize="Small" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Grid.Column="1">
+                                    <Label Text="{Binding Date}" />
+                                </VerticalStackLayout>
+                            </Grid>
+
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>
