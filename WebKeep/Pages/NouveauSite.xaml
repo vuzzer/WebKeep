@@ -21,9 +21,10 @@
         <Label Text="Note"/>
         <Editor x:Name="txtNote"  HeightRequest="100" Margin="0,0,0,25" Placeholder="Note" />
 
-        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Margin="10">
-            <Button  Text="Connexion" x:Name="btnConnexion" Clicked="btnConnexion_Clicked" BackgroundColor="Black" />
-        </HorizontalStackLayout>
+        <VerticalStackLayout Spacing="10" HorizontalOptions="Center" Margin="10">
+            <Button  Text="Enregistrer" x:Name="btnEnregistrer" BackgroundColor="Black" Clicked="btnEnregistrer_Clicked" />
+            <Button  Text="Supprimer" x:Name="btnSupprimer" BackgroundColor="Transparent" Clicked="btnSupprimer_Clicked" IsEnabled="True" TextColor="Black" FontAttributes="Bold" />
+        </VerticalStackLayout>
     </VerticalStackLayout>
     
 </ContentPage>
